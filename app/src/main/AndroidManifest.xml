@@ -1,0 +1,55 @@
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.softvenue.restramadan17">
+	<uses-permission	android:name="android.permission.INTERNET"/>
+	<uses-permission	android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<application
+		android:allowBackup="true"
+		android:label="مطاعم الرحمة بالجلفة"
+		android:icon="@drawable/app_icon"
+		android:largeHeap="true"
+		android:theme="@style/AppTheme">
+		<activity
+			android:name=".MainActivity"
+			android:configChanges="orientation|screenSize"
+			android:screenOrientation="portrait"
+			android:windowSoftInputMode="stateHidden">
+			<intent-filter>
+				<action	android:name="android.intent.action.MAIN"/>
+				<category	android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".RestaurantinfActivity"
+			android:configChanges="orientation|screenSize"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".AboutusActivity"
+			android:configChanges="orientation|screenSize"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".ShareappActivity"
+			android:configChanges="orientation|screenSize"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".RatesActivity"
+			android:configChanges="orientation|screenSize"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".AddrestaurantActivity"
+			android:configChanges="orientation|screenSize"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:name=".ReportsActivity"
+			android:configChanges="orientation|screenSize"
+			android:screenOrientation="portrait"/>
+		<meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version"/>
+		<provider
+			android:name="com.google.firebase.provider.FirebaseInitProvider"
+			android:authorities="com.softvenue.restramadan17.firebaseinitprovider"
+			android:exported="false"
+			android:initOrder="100"/>
+	</application>
+</manifest>
